@@ -1,0 +1,186 @@
+\documentclass{beamer}
+
+\usepackage[french]{babel} % ...Or not ?
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% For algorithmic and pseudocode as it says... / Pour l'algorithmique et le pseudo-code code indiqué
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+% For code listings / Pour insérer du code
+\usepackage{listings}
+
+\usetheme{Ensi}
+	
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}
+
+\title[My Wonderful Project]{Project : my wonderful development project I'm eager to share with everybody}
+\institute[ENSICAEN]{\includegraphics[height=3cm]{LogoEnsi.png}}
+\author[Jean VALJEAN]{Jean VALJEAN, 2\textsuperscript{nd} year ePCS\\ {\color{ensiblue}jvaljean@ecole.ensicaen.fr}}
+% OBVIOUSLY depends on the language you're working with. You can also hardcode it if needed (the presentation date for instance)
+
+% Dépends ÉVIDEMMENT de la langue dans laquelle on crée la présentation. On peut éventuellement coder en dur la date (celle de la présentation par exemple)
+\date{\today}
+
+
+% Additionnal logo on the right bottom corner of the pages
+% Un logo supplémentaire en bas à droite des pages
+\logo{
+	\makebox[0.95\paperwidth]{
+		\hfill
+		\includegraphics[height=0.75cm,keepaspectratio]{example-image-duck}
+	}
+}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Table of contents}
+		\tableofcontents
+	\end{frame}
+
+\section{Overview of the project}
+
+	\begin{frame}
+		\frametitle{Introduction}
+		Key information regarding the project :
+		\begin{itemize}
+			\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et. 
+			\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et. 
+			\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et. 
+		\end{itemize}
+		
+	\end{frame}			
+
+\section{Developed solution}
+
+\subsection{Something in 20 seconds}
+
+\begin{frame}
+	ALWAYS put a frametitle, even \textbf{\\frametitle\{null\}} if needed. Otherwise, the logo in the top right corner disappears.\\
+	
+	TOUJOURS mettre un titre à chaque frame, (même \textbf{\\frametitle\{null\}}) sous peine de voir disparaître le logo en haut à droite.
+\end{frame}
+
+\subsection{Different kinds of things}
+
+\begin{frame}
+	\frametitle{T.H.I.N.G.}
+	There are three types of T.H.I.N.G.s regarding something :
+	\begin{itemize}
+		\item Serial In Order (SIO) things :
+		\begin{itemize}
+			\item Output the something else in order.
+			\item Exist in one instance at most.
+		\end{itemize}
+		\item Serial Out-of-Order (SOO) things : 
+		\begin{itemize}
+			\item Output the something else in no particular order.
+			\item Exist in one instance at most.
+		\end{itemize}
+		\item Parallel things : 
+		\begin{itemize}
+			\item Output the something else in no particular order.
+			\item Exist in multiple instances.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{The thinger}
+
+	\begin{frame}
+		\frametitle{The thinger role}
+		The thinger gives us the following Navier-Stokes equations :
+		
+		\begin{equation}
+		\frac{\partial \rho}{\partial t} + \overrightarrow{\nabla}\cdot(\rho\overrightarrow{u})=0 \end{equation}
+		\begin{equation}
+		\frac{\partial(\rho \overrightarrow{u})}{\partial t} + \overrightarrow{\nabla}\cdot[\rho\overline{\overline{u\otimes u}}] = -\overrightarrow{\nabla p} + \overrightarrow{\nabla}\cdot\overline{\overline{\tau}} + \rho\overrightarrow{f} \end{equation}
+		\begin{equation}
+		\frac{\partial(\rho e)}{\partial t} + \overrightarrow{\nabla}\cdot((\rho e + p)\overrightarrow{u}) = \overrightarrow{\nabla}\cdot(\overline{\overline{\tau}}\cdot\overrightarrow{u}) + \rho\overrightarrow{f}\overrightarrow{u} + \overrightarrow{\nabla}\cdot(\overrightarrow{\dot{q}})+r \end{equation}
+		
+		That indeed have a perfectly well identified solution : 42.
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Actual thinger workflow}
+		\begin{algorithmic}	
+			\Do
+			\For{something else in something else\_List}
+			\State <<Beacon>>
+			\If{Available\_mask}
+			\State Process something else on Available\_mask using thing\_XX
+			\Else
+			\State Free Il a tout compris
+			\State Goto <<Beacon>>
+			\EndIf				
+			\EndFor
+				\doWhile{all something else have not reached the last thing}
+			\State Deallocate masks \Comment{This is a bad idea right now...}
+		\end{algorithmic}
+	\end{frame}
+
+% If you remove the "fragile", the code breaks (Ikr it's funny)
+% Si l'on enlève "fragile", le code se casse (je sais, c'est drôle)
+	\begin{frame}[fragile] 
+		\frametitle{Actual thinger workflow (in code please)}		
+\begin{lstlisting}[language=C]
+#include <unistd.h>
+
+int main(void) 
+{
+	while(1) {
+		fork(); 
+	} 
+	return 0; 
+}
+
+// Test it if you dare
+	\end{lstlisting}
+	\end{frame}
+
+\subsection{An example of oil carrier execution}
+
+	\begin{frame}
+		\frametitle{Oil carrier execution example}
+		Here is a somewhat visual example of the oil carrier :
+		\begin{center}
+			\includegraphics[height=6cm]{example-grid-100x100pt}
+		\end{center}
+			
+		\end{frame}
+	
+\section{Project assessment}
+
+\subsection{Testing results}
+
+	\begin{frame}
+	\frametitle{6 potatoes / 12 leeks}
+		Here follows the results obtained from the second benchmark :
+		\begin{center}
+			\includegraphics[width=5cm]{example-image-duck}
+		\end{center}
+	\end{frame}	
+
+\section{Conclusion}
+
+	\begin{frame}
+		\frametitle{Conclusion}
+		\begin{itemize}
+			\item Performance output by the oil carrier is correct.
+			\item Used general and specific potato fields concepts. 
+			\item Most importantly, the oil carrier just works and is accessible for oil engineers to tweak it.
+			\item Such a shame not to have been able to teamwork, even in a small team of potato farmers.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\null}
+		Do you have any questions either about potato fields, or oil carriers ?
+	\end{frame}
+
+\end{document}
