@@ -6,3 +6,7 @@ order to update the structure. Comments should help you understand the
 different options  that you have  at your disposal.   Customization is
 completely done  in the .sty files  and these should stay  in the same
 directory as the .tex.
+
+## Side note
+I do  NOT own the ENSICAEN's  logo, and it is  obviously excluded from
+the license terms.
