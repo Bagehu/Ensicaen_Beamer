@@ -18,27 +18,30 @@
 % Defines the colored stripes at the bottom of each frame. It can be customed depending on you wanting information or not
 
 % Définit les bandes colorées du bas de frame. On peut modifier cette section selon les informations que l'on veut y afficher
-\defbeamertemplate*{footline}{Ensi theme}
+
+\defbeamertemplate*{footline}{infolines theme}
 {
-  \leavevmode
-  \hbox{
-    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{ensicol1}
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{ensiBlue}%
       \expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~\insertshortinstitute}
-  \end{beamercolorbox}
-    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{ensicol2}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{ensiGreen}%
       \usebeamerfont{author in head/foot}\insertshortauthor
-  \end{beamercolorbox}
-  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{ensicol3}
-    \usebeamerfont{title in head/foot}\insertshorttitle
-    \end{beamercolorbox}
-  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{ensicol4}
-       \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-  \end{beamercolorbox}
-  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{ensicol5}
-      \insertframenumber/\inserttotalframenumber\hspace*{2ex}
-  \end{beamercolorbox}}
-  \vskip0pt
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{ensiRed}%
+      \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}}%
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{ensiOrange}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{ensiGray}%
+    \insertframenumber/\inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}%
+  \vskip0pt%
 }
+
+
 
 % Each frame head. It is basically all white with a black writing, indicating where we are in the presentation.
 
@@ -47,12 +50,12 @@
 {
   \leavevmode
   \hbox{
-  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{section in toc}
-    \usebeamerfont{section in head/foot}\insertsectionhead\hspace*{2ex}
-  \end{beamercolorbox}
-  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{section in toc}
-    \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
-  \end{beamercolorbox}}
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{section in toc}
+      \usebeamerfont{section in head/foot}\insertsectionhead\hspace*{2ex}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{section in toc}
+      \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
+    \end{beamercolorbox}}
   \vskip0pt
 }
 
@@ -60,34 +63,34 @@
 
 % La première page de la présentation. On peut y modifier les logos qui y apparaissent dans le .tex
 \defbeamertemplate*{title page}{Ensi theme}{
-    \vfill
-     \centering
+  \vfill
+  \centering
 
-     \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=true]{institute}
-        \usebeamerfont{institute}\insertinstitute
-     \end{beamercolorbox}
+  \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=true]{institute}
+    \usebeamerfont{institute}\insertinstitute
+  \end{beamercolorbox}
 
-     {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+  {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
 
-     \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=true]{title}
-        \usebeamerfont{title}\inserttitle\par
-        \ifx\insertsubtitle\@empty
-        \else
-        \vskip0.25em
-        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
-      \fi
-     \end{beamercolorbox}
+  \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=false]{title}
+    \usebeamerfont{title}\inserttitle\par
+    \ifx\insertsubtitle\@empty
+    \else
+    \vskip0.25em
+    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+    \fi
+  \end{beamercolorbox}
 
-     \vskip1em\par
+  \vskip1em\par
 
-     \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=true]{author}
-        \usebeamerfont{author}\insertauthor
-     \end{beamercolorbox}
+  \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=false]{author}
+    \usebeamerfont{author}\insertauthor
+  \end{beamercolorbox}
 
-     \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=true]{date}
-        \usebeamerfont{date}\insertdate
-     \end{beamercolorbox}\vskip0.5em
-  }
+  \begin{beamercolorbox}[sep=8pt,center,colsep=-4bp,rounded=true,shadow=false]{date}
+    \usebeamerfont{date}\insertdate
+  \end{beamercolorbox}\vskip0.5em
+}
 
 
 % Allows the insertion of the ENSICAEN's logo in the top right of the page. Code found on StackOverflow, and a bit hacky
@@ -100,16 +103,16 @@
   \advance\@tempdima by\beamer@rightmargin
   \begin{beamercolorbox}[sep=0.3cm,left,wd=\the\@tempdima]{frametitle}
     \begin{minipage}{.81\paperwidth}
-    \usebeamerfont{frametitle}
-    \vbox{}\vskip-1ex
-    \if@tempswa\else\csname beamer@fteleft\endcsname\fi
-    \strut\insertframetitle\par
-    {
-      \ifx\insertframesubtitle\@empty
-      \else
-      {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\strut\insertframesubtitle\par}
-      \fi
-    }
+      \usebeamerfont{frametitle}
+      \vbox{}\vskip-1ex
+      \if@tempswa\else\csname beamer@fteleft\endcsname\fi
+      \strut\insertframetitle\par
+      {
+        \ifx\insertframesubtitle\@empty
+        \else
+        {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\strut\insertframesubtitle\par}
+        \fi
+      }
     \end{minipage}
     \quad\raisebox{-0.3cm}{\includegraphics[height=1.15cm,keepaspectratio]{LogoEnsi.png}}
     \if@tempswa\else\vskip-.3cm\fi
